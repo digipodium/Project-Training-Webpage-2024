@@ -32,6 +32,12 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <style>
+        /* global variable */
+        :root {
+            --banner-lg-url: url('assets/hero.webp');
+            --banner-sm-url: url('assets/fypt_1.webp');
+        }
+
         .title {
             font-size: 60px;
             font-family: Montserrat;
@@ -48,23 +54,28 @@
             font-family: Montserrat;
         }
 
-        .course-row {
-            /* margin: 0 100px; */
-        }
-
         .course-section-title {
             font-size: 40px;
             font-weight: bold;
-            font-family: Anton;
+            font-family: Montserrat;
+            background-color: black;
+            color: white;
         }
 
         .banner {
             width: 100%;
             object-fit: cover;
+            content: var(--banner-lg-url);
+        }
+
+        #banner-2 {
+            display: none;
+            width: 100%;
+            object-fit: cover;
         }
 
         main {
-            background-image: url('assets/bg.png');
+            background-image: url('assets/bg.webp');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -73,20 +84,43 @@
         #btn-container {
             position: fixed;
             bottom: 10px;
-
         }
-
-        #btn-container .row {}
 
         #btn-container .card {
             padding: .5rem;
             cursor: pointer;
             width: 100px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         #btn-container .card img {
             width: 50px;
             height: 50px;
+        }
+
+        .course-card {
+            transition: all .3s ease-in-out;
+        }
+
+
+        @keyframes cardHover {
+            0% {
+                transform: scale(1);
+
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .course-card:hover {
+            /* transform: scale(1.1); */
+            animation: cardHover 2s ease-in-out infinite;
         }
 
 
@@ -97,7 +131,7 @@
             }
 
             body {
-                background-image: url('assets/bg.png');
+                background-image: url('assets/bg.webp');
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
@@ -132,11 +166,11 @@
 
         /* tablet */
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
-            
+
 
             #btn-container {
                 display: flex;
-              
+
                 margin: 2rem 0;
                 position: fixed;
                 width: 50%;
@@ -165,7 +199,7 @@
             }
 
             body {
-                background-image: url('assets/bg.png');
+                background-image: url('assets/bg.webp');
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
@@ -199,6 +233,14 @@
                 height: 50px;
                 margin-right: 0;
             }
+
+            .banner {
+                content: var(--banner-sm-url);
+            }
+
+            #banner-2 {
+                display: block;
+            }
         }
     </style>
 
@@ -206,8 +248,9 @@
 
 <body>
 
-    <header class="">
-        <img class="w-100 banner" src="assets/hero.png">
+    <header class="banner-bg">
+        <img class="w-100 banner">
+        <img id="banner-2" src="assets/fypt_2.webp">
     </header>
 
     <main>
@@ -217,72 +260,96 @@
         </div>
 
         <div class="container-fluid">
-            <div class="row py-5">
+            <div class="row py-3">
                 <div class="col-md-4 mx-auto">
-                    <img class="img-fluid" src="assets/discount_img.png" alt="">
+                    <img class="img-fluid" src="assets/discount_img.webp" alt="">
                 </div>
                 <div class="col-md-6 pb-5">
+                    <h2 class="text-center course-section-title my-3 py-3">COURSES OFFERED</h2>
                     <div class="course-section mx-5">
-                        <h2 class="text-center course-section-title">COURSE OFFERED</h2>
                         <div class="row g-5 course-row">
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/MERN.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/4608491479211618/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/MERN.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/AI.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/4442696115777455/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/AI.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/Python.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/4687347644648655/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/Python.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/DAMC.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/6615478265223887/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/DAMC.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/DA.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/7067139040013458/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/DA.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/Django.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/6657608707701820/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/Django.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/Android.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/4790562650996542/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/Android.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/IOT.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/6065589823477419/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/IOT.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/DS.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/7497959753549057/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/DS.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/CJ.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/4609005785860533/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/CJ.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img/AJ.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/4862062420482440/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img/AJ.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mx-auto">
-                                <div class="card shadow">
-                                    <img class="card-img-top" src="course-img\BA.png" alt="">
+                                <div class="card shadow course-card">
+                                    <a href="https://wa.me/p/6088958497874299/918565860872" target="_blank">
+                                        <img class="card-img-top rounded-2" src="course-img\BA.webp" alt="">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -294,16 +361,20 @@
     <div id="btn-container" class="container">
         <div class="row">
             <div class="col-6">
-                <div class="d-flex align-items-center card rounded-3 w-100">
-                    <img src="assets/calling.gif" alt="" />
-                    <h4 class="d-none d-md-block">Call Now</h3>
-                </div>
+                <a href="tel:8565860872" target="_blank">
+                    <div class="d-flex align-items-center card rounded-3 w-100">
+                        <img src="assets/calling.gif" alt="" />
+                        <h4 class="d-none d-md-block">Call Now</h3>
+                    </div>
+                </a>
             </div>
             <div class="col-6">
-                <div class="d-flex align-items-center card rounded-3 w-100">
-                    <img src="assets/message.gif" alt="" />
-                    <h4 class="d-none d-md-block">Message Now</h3>
-                </div>
+                <a href="https://wa.me/message/73IJBEFWBVS6B1" target="_blank">
+                    <div class="d-flex align-items-center card rounded-3 w-100">
+                        <img src="assets/message.gif" alt="" />
+                        <h4 class="d-none d-md-block">Message Now</h3>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -312,49 +383,77 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
+
+
+
+
     <script>
 
         // if window size if less than 600px then update banner image to fypt_1.png using risize listener
-        window.addEventListener('resize', function () {
-            var width = window.innerWidth;
-            if (width < 600) {
-                document.querySelector('.banner').src = 'assets/fypt_1.png';
-                // append another banner image below banner image if src fypt_1 exists
-                if (document.querySelector('.banner').src.includes('fypt_1')) {
-                    document.querySelector('.banner').parentElement.insertAdjacentHTML('beforeend', '<img class="w-100 banner2" src="assets/fypt_2.png">');
-                }
+        // window.addEventListener('resize', function () {
+        //     var width = window.innerWidth;
+        //     if (width < 600) {
+        //         document.querySelector('.banner').src = 'assets/fypt_1.png';
+        //         // append another banner image below banner image if src fypt_1 exists
+        //         if (document.querySelector('.banner').src.includes('fypt_1')) {
+        //             document.querySelector('.banner').parentElement.insertAdjacentHTML('beforeend', '<img class="w-100 banner2" src="assets/fypt_2.png">');
+        //         }
 
-            } else {
-                document.querySelector('.banner').src = 'assets/hero.png';
-                const banner2 = document.querySelectorAll('.banner2');
-                if (banner2) {
-                    banner2.forEach(banner => {
-                        banner.remove();
-                    });
-                }
-            }
-        });
+        //     } else {
+        //         document.querySelector('.banner').src = 'assets/hero.png';
+        //         const banner2 = document.querySelectorAll('.banner2');
+        //         if (banner2) {
+        //             banner2.forEach(banner => {
+        //                 banner.remove();
+        //             });
+        //         }
+        //     }
+        // });
 
         // check width onload event and update banner images
-        onload = (event) => {
-            var width = window.innerWidth;
-            if (width < 600) {
-                document.querySelector('.banner').src = 'assets/fypt_1.png';
-                // append another banner image below banner image if src fypt_1 exists
-                if (document.querySelector('.banner').src.includes('fypt_1')) {
-                    document.querySelector('.banner').parentElement.insertAdjacentHTML('beforeend', '<img class="w-100 banner2" src="assets/fypt_2.png">');
-                }
+        // onload = (event) => {
+        //     var width = window.innerWidth;
+        //     if (width < 600) {
+        //         document.querySelector('.banner').src = 'assets/fypt_1.png';
+        //         // append another banner image below banner image if src fypt_1 exists
+        //         if (document.querySelector('.banner').src.includes('fypt_1')) {
+        //             document.querySelector('.banner').parentElement.insertAdjacentHTML('beforeend', '<img class="w-100 banner2" src="assets/fypt_2.png">');
+        //         }
 
-            } else {
-                document.querySelector('.banner').src = 'assets/hero.png';
-                const banner2 = document.querySelectorAll('.banner2');
-                if (banner2) {
-                    banner2.forEach(banner => {
-                        banner.remove();
-                    });
-                }
-            }
-        };
+        //     } else {
+        //         document.querySelector('.banner').src = 'assets/hero.png';
+        //         const banner2 = document.querySelectorAll('.banner2');
+        //         if (banner2) {
+        //             banner2.forEach(banner => {
+        //                 banner.remove();
+        //             });
+        //         }
+        //     }
+        // };
+    </script>
+
+    <!-- reveal animation js -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        // course cards
+
+        ScrollReveal().reveal('.course-card', {
+            duration: 300,
+            origin: 'bottom',
+            distance: '50px',
+            scale: 0.9,
+            interval: 50
+        });
+
+        // btn container
+        ScrollReveal().reveal('#btn-container', {
+            duration: 300,
+            origin: 'bottom',
+            distance: '50px',
+            scale: 0.9,
+            interval: 50
+        });
     </script>
 
 </body>
