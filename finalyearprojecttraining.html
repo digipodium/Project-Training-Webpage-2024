@@ -23,7 +23,11 @@
     <!-- End Meta Pixel Code -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Major Project Training 2024</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
         href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
         rel="stylesheet" />
@@ -84,6 +88,7 @@
         #btn-container {
             position: fixed;
             bottom: 10px;
+            padding-bottom: 80px;
         }
 
         #btn-container .card {
@@ -121,6 +126,23 @@
         .course-card:hover {
             /* transform: scale(1.1); */
             animation: cardHover 2s ease-in-out infinite;
+        }
+
+        /* make div parallelogram */
+
+        .floating-title {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            font-size: 4rem;
+            font-weight: bold;
+            /* background-color: black; */
+            /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); */
+        }
+
+        footer {
+            background-color: black;
+            color: white;
         }
 
 
@@ -162,6 +184,13 @@
                 height: 50px;
                 margin-right: 0;
             }
+
+            .floating-title {
+                top: 0;
+                font-size: 4rem;
+            }
+
+
         }
 
         /* tablet */
@@ -190,19 +219,31 @@
                 height: 50px;
                 margin-right: 0;
             }
+
+            .floating-title {
+                top: 0;
+                font-size: 2.7rem;
+            }
         }
 
+        /* @media only screen and (max-width: 800px) {
+            .banner {
+                margin-top: 60px;
+            }
+        } */
+
         /* mobile css */
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 800px) {
             main {
                 background: none;
             }
 
             body {
-                background-image: url('assets/bg.webp');
+                background-image: url('assets/mobile-bg.svg');
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
+                background-attachment: fixed;
             }
 
             .title {
@@ -236,10 +277,20 @@
 
             .banner {
                 content: var(--banner-sm-url);
+                margin-top: 60px;
             }
 
             #banner-2 {
                 display: block;
+            }
+
+            .floating-title {
+                text-align: center;
+                top: 0;
+                left: 0;
+                width: 100%;
+
+                font-size: 3rem;
             }
         }
     </style>
@@ -248,7 +299,10 @@
 
 <body>
 
+
+
     <header class="banner-bg">
+        <h1 class="m-0 py-3 floating-title">ADMISSION OPEN</h1>
         <img class="w-100 banner">
         <img id="banner-2" src="assets/fypt_2.webp">
     </header>
@@ -256,7 +310,6 @@
     <main>
         <div class="text-center">
             <h1 class="m-0 py-3 title text-white">NEW SESSION STARTING FROM JANUARY'2024</h1>
-            <!-- <h3 class="py-3 bg-dark sub-title text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nobis!</h3> -->
         </div>
 
         <div class="container-fluid">
@@ -361,7 +414,7 @@
     <div id="btn-container" class="container">
         <div class="row">
             <div class="col-6">
-                <a href="tel:8565860872" target="_blank">
+                <a href="tel:9415082377" target="_blank">
                     <div class="d-flex align-items-center card rounded-3 w-100">
                         <img src="assets/calling.gif" alt="" />
                         <h4 class="d-none d-md-block">Call Now</h3>
@@ -379,58 +432,48 @@
         </div>
     </div>
 
+    <footer class="py-3">
+        <div class="container-fluid">
+            <div class="col-md-10 mx-auto">
+                <div class="row align-items-center">
+
+                    <div class="col-md-3">
+                        <a href="https://www.digipodium.com/"
+                            class="d-block m-auto text-muted mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                            <img src="assets/digi_logo_white.png" alt="logo" height="50px">
+                        </a>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <h6 class="my-auto">Connect with us :</h6>
+                        <ul class="nav">
+                            <li class="nav-item"><a target="_blank"
+                                    href="https://www.facebook.com/majorprojecttrainingforcomputerscience"
+                                    class="nav-link px-2 text-white"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                            </li>
+                            <li class="nav-item"><a target="_blank"
+                                    href="https://www.linkedin.com/company/summertrainingandinternship/"
+                                    class="nav-link px-2 text-white"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                            </li>
+                            <li class="nav-item"><a target="_blank" href="https://www.instagram.com/digipodium_official"
+                                    class="nav-link px-2 text-white"><i class="fa-brands fa-instagram"></i>
+                                    Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-center">
+                        <p class="m-0">Created and Maintained by Digipodium</p>
+                        <!-- <p class="mb-0 text-body-muted">&copy; 2024 Digipodium</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-
-
-
-
-
-    <script>
-
-        // if window size if less than 600px then update banner image to fypt_1.png using risize listener
-        // window.addEventListener('resize', function () {
-        //     var width = window.innerWidth;
-        //     if (width < 600) {
-        //         document.querySelector('.banner').src = 'assets/fypt_1.png';
-        //         // append another banner image below banner image if src fypt_1 exists
-        //         if (document.querySelector('.banner').src.includes('fypt_1')) {
-        //             document.querySelector('.banner').parentElement.insertAdjacentHTML('beforeend', '<img class="w-100 banner2" src="assets/fypt_2.png">');
-        //         }
-
-        //     } else {
-        //         document.querySelector('.banner').src = 'assets/hero.png';
-        //         const banner2 = document.querySelectorAll('.banner2');
-        //         if (banner2) {
-        //             banner2.forEach(banner => {
-        //                 banner.remove();
-        //             });
-        //         }
-        //     }
-        // });
-
-        // check width onload event and update banner images
-        // onload = (event) => {
-        //     var width = window.innerWidth;
-        //     if (width < 600) {
-        //         document.querySelector('.banner').src = 'assets/fypt_1.png';
-        //         // append another banner image below banner image if src fypt_1 exists
-        //         if (document.querySelector('.banner').src.includes('fypt_1')) {
-        //             document.querySelector('.banner').parentElement.insertAdjacentHTML('beforeend', '<img class="w-100 banner2" src="assets/fypt_2.png">');
-        //         }
-
-        //     } else {
-        //         document.querySelector('.banner').src = 'assets/hero.png';
-        //         const banner2 = document.querySelectorAll('.banner2');
-        //         if (banner2) {
-        //             banner2.forEach(banner => {
-        //                 banner.remove();
-        //             });
-        //         }
-        //     }
-        // };
-    </script>
 
     <!-- reveal animation js -->
     <script src="https://unpkg.com/scrollreveal"></script>
