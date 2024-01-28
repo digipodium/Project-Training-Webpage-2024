@@ -35,6 +35,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="public/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon/favicon-16x16.png">
+    <meta name="theme-color" content="#ffffff">
+
+
     <style>
         /* global variable */
         :root {
@@ -187,7 +193,7 @@
 
             .floating-title {
                 top: 0;
-                font-size: 4rem;
+                font-size: 5.5rem;
             }
 
 
@@ -252,27 +258,24 @@
             }
 
             #btn-container {
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                margin: 2rem 0;
-                position: fixed;
-                width: 100%;
-                left: 0;
-                bottom: 0;
-                flex-direction: column;
+                padding-bottom: 0;
+                right: 5px;
+                bottom: 40px;
+                width: fit-content;
+            }
+
+            #btn-container .row {
                 gap: 1rem;
+                flex-direction: column;
             }
 
-            #btn-container .card {
-                width: 100%;
-                justify-content: center;
+            #btn-container .col-6 {
+                width: fit-content;
             }
 
-            #btn-container .card img {
-                width: 50px;
-                height: 50px;
-                margin-right: 0;
+            .container{
+                padding: 0;
+                margin: 0;
             }
 
             .banner {
@@ -289,8 +292,11 @@
                 top: 0;
                 left: 0;
                 width: 100%;
+                font-size: 2rem;
+            }
 
-                font-size: 3rem;
+            .connect{
+                display: block !important;
             }
         }
     </style>
@@ -313,92 +319,92 @@
         </div>
 
         <div class="container-fluid">
-            <div class="row py-3">
-                <div class="col-md-4 mx-auto">
+            <div class="row py-3 justify-content-center">
+                <div class="col-md-4">
                     <img class="img-fluid" src="assets/discount_img.webp" alt="">
                 </div>
                 <div class="col-md-6 pb-5">
                     <h2 class="text-center course-section-title my-3 py-3">COURSES OFFERED</h2>
                     <div class="course-section mx-5">
                         <div class="row g-5 course-row">
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/4608491479211618/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/MERN.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/4442696115777455/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/AI.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/4687347644648655/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/Python.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/6615478265223887/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/DAMC.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/7067139040013458/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/DA.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/6657608707701820/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/Django.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/4790562650996542/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/Android.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/6065589823477419/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/IOT.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/7497959753549057/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/DS.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/4609005785860533/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/CJ.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/4862062420482440/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img/AJ.webp" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mx-auto">
+                            <div class="col-xl-4 col-md-6 mx-auto">
                                 <div class="card shadow course-card">
                                     <a href="https://wa.me/p/6088958497874299/918565860872" target="_blank">
                                         <img class="card-img-top rounded-2" src="course-img\BA.webp" alt="">
@@ -443,20 +449,19 @@
                             <img src="assets/digi_logo_white.png" alt="logo" height="50px">
                         </a>
                     </div>
-                    <div class="col-md-6 d-flex align-items-center">
-                        <h6 class="my-auto">Connect with us :</h6>
+                    <div class="col-md-6 d-flex align-items-center connect">
+                        <h6 class="my-auto me-2">Connect with us :</h6>
                         <ul class="nav">
                             <li class="nav-item"><a target="_blank"
                                     href="https://www.facebook.com/majorprojecttrainingforcomputerscience"
-                                    class="nav-link px-2 text-white"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                                    class="nav-link ps-0 text-white d-flex align-items-center" style="gap: 3px;"><img src="/assets/facebook_icon.png" height="16" alt=""> Facebook</a>
                             </li>
                             <li class="nav-item"><a target="_blank"
                                     href="https://www.linkedin.com/company/summertrainingandinternship/"
-                                    class="nav-link px-2 text-white"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                                    class="nav-link ps-0 text-white d-flex align-items-center" style="gap: 3px;"><img src="/assets/linkedin_icon.png" height="16" alt="">Linkedin</a>
                             </li>
                             <li class="nav-item"><a target="_blank" href="https://www.instagram.com/digipodium_official"
-                                    class="nav-link px-2 text-white"><i class="fa-brands fa-instagram"></i>
-                                    Instagram</a>
+                                    class="nav-link ps-0 text-white d-flex align-items-center" style="gap: 3px;"><img src="/assets/instagram_icon.png" height="16" alt=""> Instagram</a>
                             </li>
                         </ul>
                     </div>
