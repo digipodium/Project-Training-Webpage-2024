@@ -52,53 +52,228 @@
 
     <link href="https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900"
         rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700" rel="stylesheet" />
 
     <style>
+        :root {
+            --theme-color: #df7f55;
+        }
+
+        .styled {
+            font-family: Dancing Script;
+        }
+
         .slide-main {
             background-image: url("/assets/hero.webp");
         }
 
         .hero-section {
-            height: 300vh;
-            background-image: url('/banner/full.png');
+            /* min-height: 300vh; */
+            background-image: url('/banner/full_2.png');
             background-size: cover;
-            /* background-position: right; */
+            background-position: center;
         }
 
         .hero-title {
             font-family: League Spartan;
         }
 
-        @media screen and (max-width: 768px){
+        .styled-1 {
+            top: calc(100vh + 50px);
+            left: 200px;
+        }
+
+        .styled-1-icon {
+            top: calc(100vh + 200px);
+            left: 30%;
+            width: 150px;
+        }
+        
+        .styled-2 {
+            top: calc(200vh + 200px);
+            right: 300px;
+        }
+
+        .styled-2-icon {
+            top: calc(200vh + 330px);
+            right: 30%;
+            width: 150px;
+        }
+
+        @media screen and (max-width: 768px) {
             .hero-section {
                 background-image: url('/banner/mobile_bg.png');
                 background-position: center;
+                /* height: auto; */
             }
         }
-
     </style>
 
     <!-- CSS HS -->
-    <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
+    <!-- <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css"> -->
 </head>
 
-<body class="dark:bg-neutral-900">
-
+<body class="">
     <main id="content">
+        <h1 class="hidden md:block text-8xl styled styled-1 absolute text-center -rotate-12">Checkout <br> Our Courses
+        </h1>
+        <img class="hidden md:block styled-1-icon absolute" src="/assets/arrow-1.png" alt="">
         <section class="hero-section">
-
-            <div class="max-w-[90rem] px-4 lg:px-6 lg:px-8 py-12 lg:py-24 mx-auto">
+            <div class="border border-b-2 border-[#df7f55] py-2 backdrop-blur md:hidden">
+                <img class="block max-[768px]:mx-auto h-[50px] md:h-[70px]" src="/assets/digi_logo_black.png" alt="">
+            </div>
+            <div class="max-w-[95rem] px-4 lg:px-6 lg:px-8 py-4 lg:py-8 mx-auto h-screen">
                 <div class="grid grid-cols-12">
-                    <div class="col-span-12 md:col-span-8 space-y-4 max-[768px]:text-center">
-                        <img style="height: 70px;" class="block max-[768px]:mx-auto" src="/assets/digi_logo_black.png" alt="">
-                        <h1 class="text-7xl font-bold hero-title">SUMMER INTERSHIP</h1>
-                        <h1 class="text-7xl font-bold hero-title">SUMMER TRAINING</h1>
-                        <h4 class="text-2xl font-bold">for B.Tech (CSE/IT), BCA, MCA<br> & All Computer Science
-                            Students!</h4>
-                        <h1 class="text-6xl font-bold hero-title">ADMISSION OPEN</h1>
-                        <h4 class="text-8xl font-bold hero-title">2024</h4>
+                    <div class="col-span-12 md:col-span-8  text-center md:text-left">
+                        <img class="hidden md:block max-[768px]:mx-auto h-[50px] md:h-[70px]"
+                            src="/assets/digi_logo_black.png" alt="">
+                        <div class="space-y-2 md:space-y-4 mt-16">
+                            <h1 class="text-5xl md:text-8xl font-bold hero-title">SUMMER <br> INTERNSHIP</h1>
+                            <h1 class="text-5xl md:text-8xl font-bold hero-title">SUMMER <br> TRAINING</h1>
+                            <h4 class="text-xl md:text-3xl pb-4">for B.Tech (CSE/IT), BCA, MCA<br> & All Computer
+                                Science
+                                Students!</h4>
+                            <h1 class="text-4xl md:text-7xl font-bold hero-title">ADMISSION OPEN</h1>
+                            <h4 class="text-6xl md:text-8xl font-bold hero-title">2024</h4>
+                        </div>
+                        <img class="md:hidden" src="/banner/Abhishek.png" alt="">
                     </div>
-                    <div class="col-span-12 md:col-span-4"></div>
+                </div>
+            </div>
+            <h1 class="hidden md:block text-6xl styled styled-2 absolute text-center rotate-12">Our Summer Training<br>Internship Program</h1>
+            <img class="hidden md:block styled-2-icon absolute rotate-180" src="/assets/arrow-2.png" alt="">
+            <div class="px-4 lg:px-6 lg:px-8 py-4 lg:py-24 mx-auto md:mt-32 min-h-screen">
+                <div class="grid grid-cols-12 h-full">
+                    <div class="md:col-span-4"></div>
+                    <div
+                        class="col-span-12 md:col-span-8 space-y-2 md:space-y-4 p-4 md:p-32 text-center md:text-left flex flex-col justify-center items-start w-full">
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-16">
+
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+                            <a class="group block" href="#" id="mernstack">
+                                <div class="shadow-lg overflow-hidden bg-gray-100 rounded-lg">
+                                    <img class=" group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-lg"
+                                        src="/course-img/MERN.webp" alt="Image Description">
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-[95rem] px-4 lg:px-6 lg:px-8 py-4 lg:py-24 mx-auto min-h-screen mt-32 ">
+                <div class="grid grid-cols-12">
+                    <div class="col-span-12 md:col-span-8 space-y-2 md:space-y-4 bg-white p-8">
+                        <h1 class="text-2xl md:text-5xl font-bold hero-title">Summer Internship / Training Program for
+                            Computer Science Students</h1>
+
+                        <p class="text-lg md:text-2xl">Are you a computer science student seeking valuable summer
+                            internship opportunities and skill
+                            development? Whether you're pursuing B.Tech, M.Tech, B.E, MCA, M.Sc. IT, B.Sc. IT, BCA, or a
+                            related diploma, our Summer Training Program is designed to empower you with essential
+                            industry skills.</p>
+
+                        <h2 class="text-2xl md:text-4xl">Why Choose Our Summer Training Program?</h2>
+
+                        <ul class="md:text-xl space-y-2 list-disc ml-12">
+                            <li><strong>Assured Global Certification:</strong> Each attendee earns a valuable global
+                                certification upon completion of the program.</li>
+                            <li><strong>Summer Internship Letter:</strong> Receive an internship letter upon successful
+                                project completion, enhancing your resume.</li>
+                            <li><strong>Inclusive Minor/Mini Projects:</strong> Every course includes hands-on minor or
+                                mini projects to reinforce learning.</li>
+                            <li><strong>Free GitHub Training:</strong> Gain proficiency in GitHub with complimentary
+                                training sessions.</li>
+                            <li><strong>Complimentary Premium Software:</strong> Access premium software tools for free
+                                during the training period.</li>
+                            <li><strong>Expert Guidance:</strong> Learn and develop skills under the mentorship of
+                                globally certified trainers.</li>
+                            <li><strong>Placement Drive Opportunity:</strong> Unlock potential job placements through
+                                our dedicated placement drives.</li>
+                        </ul>
+
+                        <hr class="border-slate-500 block my-8">
+                        <h2 class="text-2xl md:text-4xl">Program Highlights</h2>
+
+                        <ul class="md:text-xl space-y-2 list-disc ml-12">
+                            <li><strong>Tailored Curriculum:</strong> Aligned with current industry demands to bridge
+                                the skill gap effectively.</li>
+                            <li><strong>Hands-on Experience:</strong> Engage in real-world projects to apply theoretical
+                                knowledge.</li>
+                            <li><strong>Flexible Timings:</strong> Courses conducted during May, June, and July to suit
+                                your summer break.</li>
+                            <li><strong>Industry Insights:</strong> Gain insights into the latest trends and
+                                technologies from experienced professionals.</li>
+                            <li><strong>Career Readiness:</strong> Prepare yourself for job interviews and career
+                                opportunities post-training.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -213,7 +388,6 @@
                 </a>
 
             </div>
-            <!-- End Card Grid -->
 
             <div class="mt-10 lg:mt-20 text-center">
                 <a class="relative inline-block font-medium md:text-lg text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-none focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white"
@@ -459,171 +633,12 @@
             <!-- End Grid -->
         </div>
     </footer>
-    <!-- ========== END FOOTER ========== -->
-
-    <div
-        class="fixed bottom-2 sm:bottom-4 end-2 sm:end-4 ms-2 z-[70] bg-neutral-900 border border-neutral-800 rounded-lg dark:bg-neutral-800">
-        <!-- Button Group -->
-        <div class="flex items-center gap-px">
-            <p
-                class="inline-flex gap-x-2 text-xs text-white py-1 px-2 relative before:absolute before:top-1/2 before:-start-0.5 before:z-10 before:w-px before:h-4 before:bg-white/20 before:-translate-y-1/2 first:before:hidden">
-                <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 16v-4" />
-                    <path d="M12 8h.01" />
-                </svg>
-                This is the Preline UI template preview mode.
-            </p>
-
-            <!-- Templates Dropdown -->
-            <div
-                class="hs-dropdown relative inline-flex [--strategy:absolute] [--placement:bottom-right] before:absolute before:top-1/2 before:-start-px before:z-10 before:w-px before:h-4 before:bg-white/20 before:-translate-y-1/2 first:before:hidden">
-                <button type="button"
-                    class="hs-dropdown-toggle py-2.5 sm:py-1.5 px-2 inline-flex justify-center items-center gap-x-2 text-xs rounded-e-lg border border-transparent bg-neutral-900 text-white hover:bg-neutral-950 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-900 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-                    Templates
-                    <svg class="hs-dropdown-open:rotate-180 flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg"
-                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m18 15-6-6-6 6" />
-                    </svg>
-                </button>
-
-                <!-- Dropdown -->
-                <div
-                    class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-48 transition-[opacity,margin] duration opacity-0 hidden z-10 border border-neutral-800 bg-neutral-900 rounded-lg shadow-[0_10px_40px_10px_rgba(0,0,0,0.08)] dark:bg-neutral-800 dark:shadow-[0_10px_40px_10px_rgba(0,0,0,0.2)]">
-                    <div class="p-1 space-y-0.5">
-                        <span class="block p-2 pb-1 text-[11px] uppercase text-gray-400 dark:text-neutral-400">Main
-                            Pages</span>
-
-                        <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 "
-                            href="../../index.html">
-                            Preline UI
-                            <svg class="flex-shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M5 12h14" />
-                                <path d="m12 5 7 7-7 7" />
-                            </svg>
-                        </a>
-
-                        <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 "
-                            href="../../docs/index.html">
-                            Components (570+)
-                            <svg class="flex-shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M5 12h14" />
-                                <path d="m12 5 7 7-7 7" />
-                            </svg>
-                        </a>
-
-                        <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 "
-                            href="../../examples.html">
-                            Examples (185+)
-                            <svg class="flex-shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M5 12h14" />
-                                <path d="m12 5 7 7-7 7" />
-                            </svg>
-                        </a>
-
-                        <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 "
-                            href="../../templates.html">
-                            Templates (2)
-                            <svg class="flex-shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M5 12h14" />
-                                <path d="m12 5 7 7-7 7" />
-                            </svg>
-                        </a>
-
-                        <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 "
-                            href="../../plugins.html">
-                            Plugins (19)
-                            <svg class="flex-shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M5 12h14" />
-                                <path d="m12 5 7 7-7 7" />
-                            </svg>
-                        </a>
-
-                        <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 "
-                            href="../../figma.html">
-                            Figma
-                            <svg class="flex-shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M5 12h14" />
-                                <path d="m12 5 7 7-7 7" />
-                            </svg>
-                        </a>
-
-                        <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 "
-                            href="../../pro/index.html">
-                            Preline Pro
-                            <svg class="flex-shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M5 12h14" />
-                                <path d="m12 5 7 7-7 7" />
-                            </svg>
-                        </a>
-
-                        <div class="border-b border-gray-800 dark:border-neutral-700 pt-1"></div>
-                        <span class="block p-2 pb-1 text-[11px] uppercase text-gray-400 dark:text-neutral-400">Template
-                            Previews</span>
-
-                        <div
-                            class="space-y-0.5 max-h-96 overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-neutral-800 [&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 "
-                                href="../../templates/agency/index.html">
-                                Agency
-                                <svg class="flex-shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition"
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M5 12h14" />
-                                    <path d="m12 5 7 7-7 7" />
-                                </svg>
-                            </a>
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 active-link bg-neutral-800 dark:bg-neutral-700"
-                                href="../../templates/creative-agency/index.html">
-                                Creative Agency
-                                <svg class="flex-shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition"
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M5 12h14" />
-                                    <path d="m12 5 7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Dropdown -->
-            </div>
-            <!-- End Templates Dropdown -->
-        </div>
-        <!-- End Button Group -->
-    </div>
 
     <!-- JS Implementing Plugins -->
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- JS PLUGINS -->
     <!-- Required plugins -->
-    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script> -->
 
     <!-- JS THIRD PARTY PLUGINS -->
     <!-- Google Analytics. Global site tag (gtag.js) -->
